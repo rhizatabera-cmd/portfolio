@@ -104,7 +104,7 @@ body {
 
 .highlight {
   font-family: 'Great Vibes', cursive; /* highlight sentence in cursive */
-  font-size: 20px;
+  font-size: 15px;
   font-weight: bold;
   color: #FFD700;                      /* gold color */
   background-color: rgba(0,0,0,0.4);   /* subtle dark background */
