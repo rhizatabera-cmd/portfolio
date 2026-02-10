@@ -17,9 +17,9 @@ body {
 /* Navbar */
 .navbar {
   position: fixed;
-  top: 50%;              /* halfway down the page */
+  top: 50%;              /* halfway right side */
   right: 20px;            /* aligned to the right side */
-  transform: translateY(-50%); /* perfectly centered vertically */
+  transform: translateY(-50%); /* perfectly centered horizontal */
   z-index: 1000;
 }
 
