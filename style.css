@@ -1,48 +1,59 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rhiza Portfolio</title>
-  <link rel="stylesheet" href="style.css">
-  <!-- Belinda Script font -->
-  <link href="https://fonts.cdnfonts.com/css/belinda-script" rel="stylesheet">
-</head>
-<body>
+/* Background */
+body {
+  margin: 0;
+  font-family: 'Belinda script', cursive;
+  background: url('your-background.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: white;
+}
 
-  <!-- Navigation -->
-  <nav class="navbar">
-    <ul>
-      <li><a href="#about">About me</a></li>
-      <li><a href="#work">Work With Me</a></li>
-      <li><a href="rhiza.tabera@gmail.com">Contacts</a></li>
-      <li><a href="#hire" class="hire-btn">Hire Me</a></li>
-    </ul>
-  </nav>
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+}
 
-  <!-- Hero Section -->
-  <header class="hero">
-    <h1>Welcome to My Website</h1>
-    <p>Showcasing my work and passion</p>
-  </header>
+.navbar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 10px;
+}
 
-  <!-- About Section -->
-  <section id="about" class="card">
-    <h2>About Me</h2>
-    <p>This is where you write about yourself...</p>
-  </section>
+.navbar a {
+  text-decoration: none;
+  padding: 6px 12px;
+  background-color: rgba(0,0,0,0.6); /* semi-transparent */
+  color: white;
+  border-radius: 4px;
+  font-size: 14px;
+  transition: background-color 0.3s;
+}
 
-  <!-- Work Section -->
-  <section id="work" class="card">
-    <h2>Work With Me</h2>
-    <p>Details about your services or collaborations...</p>
-  </section>
+.navbar a:hover {
+  background-color: rgba(255,255,255,0.3);
+}
 
-  <!-- Hire Section -->
-  <section id="hire" class="card">
-    <h2>Hire Me</h2>
-    <p>Call me at <a href="tel:+639123456789">+63 912 345 6789</a> or email <a href="mailto:yourname@gmail.com">yourname@gmail.com</a></p>
-  </section>
+/* Highlight Hire Me button */
+.hire-btn {
+  background-color: rgba(255, 0, 0, 0.7);
+  font-weight: bold;
+}
 
-</body>
-</html>
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 100px 20px;
+}
+
+/* Transparent Cards */
+.card {
+  background-color: rgba(0,0,0,0.5); /* transparent effect */
+  margin: 40px auto;
+  padding: 20px;
+  max-width: 600px;
+  border-radius: 10px;
+}
