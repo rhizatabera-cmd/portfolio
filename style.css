@@ -1,10 +1,27 @@
-/* Background */
+/* Default site font */
 body {
   margin: 0;
-  font-family: 'Belinda script', cursive;
-  bbackground: url('images/background.jpg') no-repeat center center fixed;
+  font-family: 'Poppins', sans-serif;
+  background: url('images/background.jpg') no-repeat center center fixed;
   background-size: cover;
-  color: black;
+  color: white;
+}
+
+/* Navbar buttons use Belinda */
+.navbar a {
+  font-family: 'Belinda script', cursive;
+  text-decoration: none;
+  padding: 6px 12px;
+  background-color: rgba(0,0,0,0.6);
+  color: white;
+  border-radius: 4px;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.navbar a:hover {
+  background-color: rgba(255,255,255,0.3);
+}
 }
 
 /* Navbar */
