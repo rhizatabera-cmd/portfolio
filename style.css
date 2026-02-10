@@ -17,11 +17,11 @@ body {
 /* Navbar */
 .navbar {
   position: fixed;
-  top: 50%;              /* halfway right side */
-  right: 20px;            /* aligned to the right side */
-  transform: translateY(-50%); /* perfectly centered horizontal */
+  top: 20px;   /* near the top */
+  right: 20px; /* aligned to the right side */
   z-index: 1000;
 }
+
 
 .navbar ul {
   list-style: none;
