@@ -4,7 +4,7 @@ body {
   font-family: 'Poppins', sans-serif;
   background: url('images/background.jpg') no-repeat center center fixed;
   background-size: cover;
-  color: white;
+  color: pink;
 }
 
 /* Navbar buttons use Belinda */
@@ -13,7 +13,7 @@ body {
   text-decoration: none;
   padding: 6px 12px;
   background-color: rgba(0,0,0,0.6);
-  color: white;
+  color: Pink;
   border-radius: 4px;
   font-size: 16px;
   transition: background-color 0.3s;
@@ -44,7 +44,7 @@ body {
   text-decoration: none;
   padding: 6px 12px;
   background-color: rgba(0,0,0,0.6); /* semi-transparent */
-  color: black;
+  color: pink;
   border-radius: 4px;
   font-size: 14px;
   transition: background-color 0.3s;
@@ -72,7 +72,7 @@ body {
 .hero h1 {
   font-family: 'Belinda script', cursive; /* stylish font for your name */
   font-size: 48px;
-  color: white;
+  color: pink;
 }
 
 /* Transparent Cards */
