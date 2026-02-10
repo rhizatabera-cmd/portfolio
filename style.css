@@ -1,6 +1,8 @@
 body {
   margin: 0;
-  font-family: 'Segoe UI', sans-serif;
+  font-family: 'Belinda script', sans-serif;
+}
+
   background: url('background.jpg') no-repeat center center fixed;
   background-size: cover;
   color: #fff; /* text color on top of image */
@@ -16,7 +18,7 @@ header span {
 }
 
 section {
-  background: white;
+  background: transparent;
   margin: 20px;
   padding: 30px;
   border-radius: 16px;
@@ -25,6 +27,12 @@ section {
 
 h2 {
   color: #ff4d6d;
+}
+font-family: 'Belinda script', cursive;
+}
+
+p {
+  font-family: 'Arial', sans-serif; /* fallback for body text */
 }
 
 .skills ul {
@@ -44,7 +52,7 @@ h2 {
 
 .card {
   background: #6a00ff;
-  color: white;
+  color: transparent;
   padding: 20px;
   border-radius: 12px;
   text-align: center;
@@ -58,5 +66,5 @@ h2 {
 footer {
   text-align: center;
   padding: 20px;
-  color: white;
+  color: transparent;
 }
