@@ -1,27 +1,17 @@
-/* Default site font */
+/* Background image */
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
-  background: url('images/background.jpg') no-repeat center center fixed;
+  background: url('background.jpg') no-repeat center center fixed;
   background-size: cover;
-  color: pink;
+  color: black;
 }
 
-/* Navbar buttons use Belinda */
-.navbar a {
-  font-family: 'Belinda script', cursive;
-  text-decoration: none;
-  padding: 6px 12px;
-  background-color: rgba(0,0,0,0.6);
-  color: Pink;
-  border-radius: 4px;
-  font-size: 16px;
-  transition: background-color 0.3s;
-}
-
-.navbar a:hover {
-  background-color: rgba(255,255,255,0.3);
-}
+/* Overlay layer */
+.overlay {
+  background-color: rgba(0,0,0,0.6); /* dark transparent layer */
+  min-height: 100vh;
+  width: 100%;
 }
 
 /* Navbar */
@@ -41,12 +31,13 @@ body {
 }
 
 .navbar a {
+  font-family: 'Belinda script', cursive; /* Belinda for buttons */
   text-decoration: none;
   padding: 6px 12px;
-  background-color: rgba(0,0,0,0.6); /* semi-transparent */
-  color: pink;
+  background-color: rgba(0,0,0,0.6);
+  color: white;
   border-radius: 4px;
-  font-size: 14px;
+  font-size: 16px;
   transition: background-color 0.3s;
 }
 
@@ -63,21 +54,28 @@ body {
 /* Hero Section */
 .hero {
   display: flex;
-  justify-content: center;   /* centers horizontally */
-  align-items: center;       /* centers vertically */
-  height: 100vh;             /* full screen height */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* full screen height */
   text-align: center;
 }
 
 .hero h1 {
-  font-family: 'Belinda script', cursive; /* stylish font for your name */
+  font-family: 'Belinda script', cursive;
   font-size: 48px;
-  color: pink;
+  margin: 0;
+}
+
+.hero p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+  margin-top: 10px;
 }
 
 /* Transparent Cards */
 .card {
-  background-color: rgba(0,0,0,0.5); /* transparent effect */
+  background-color: rgba(255,255,255,0.1); /* lighter transparency for cards */
   margin: 40px auto;
   padding: 20px;
   max-width: 600px;
