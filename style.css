@@ -62,8 +62,17 @@ body {
 
 /* Hero Section */
 .hero {
+  display: flex;
+  justify-content: center;   /* centers horizontally */
+  align-items: center;       /* centers vertically */
+  height: 100vh;             /* full screen height */
   text-align: center;
-  padding: 100px 20px;
+}
+
+.hero h1 {
+  font-family: 'Belinda script', cursive; /* stylish font for your name */
+  font-size: 48px;
+  color: white;
 }
 
 /* Transparent Cards */
