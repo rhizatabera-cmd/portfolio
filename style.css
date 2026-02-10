@@ -117,3 +117,14 @@ body {
   max-width: 600px;
   border-radius: 10px;
 }
+
+.highlight {
+  font-family: 'Belinda script', cursive; /* elegant font */
+  font-size: 24px;                        /* larger size */
+  font-weight: bold;                      /* bold emphasis */
+  color: #FFD700;                         /* gold color */
+  background-color: rgba(0,0,0,0.4);      /* subtle dark background */
+  padding: 4px 8px;
+  border-radius: 6px;
+  display: inline-block;
+}
