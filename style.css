@@ -97,10 +97,20 @@ body {
 }
 
 .hero h1 {
-  font-family: 'Belinda script', cursive; /* stylish font for your name */
-  font-size: 48px;
+  font-family: 'Great Vibes', cursive; /* elegant cursive font */
+  font-size: 48px;                     /* make it big for the hero */
   margin: 0;
 }
+
+.highlight {
+  font-family: 'Great Vibes', cursive; /* highlight sentence in cursive */
+  font-size: 24px;
+  font-weight: bold;
+  color: #FFD700;                      /* gold color */
+  background-color: rgba(0,0,0,0.4);   /* subtle dark background */
+  padding: 4px 8px;
+  border-radius: 6px;
+  display: inline-block;
 
 .hero p {
   font-family: 'Poppins', sans-serif; /* clean font for tagline */
@@ -116,15 +126,4 @@ body {
   padding: 20px;
   max-width: 600px;
   border-radius: 10px;
-}
-
-.highlight {
-  font-family: 'Belinda script', cursive; /* elegant font */
-  font-size: 24px;                        /* larger size */
-  font-weight: bold;                      /* bold emphasis */
-  color: #FFD700;                         /* gold color */
-  background-color: rgba(0,0,0,0.4);      /* subtle dark background */
-  padding: 4px 8px;
-  border-radius: 6px;
-  display: inline-block;
 }
