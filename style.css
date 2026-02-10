@@ -57,13 +57,14 @@ body {
   list-style: none;
   margin: 0;
   padding: 0;
-  display: flex;
-  flex-direction: column; /* stack buttons vertically */
-  gap: 10px;
+  display: flex;          /* horizontal layout */
+  flex-direction: row;    /* opposite of column */
+  gap: 10px;              /* space between buttons */
 }
 
+
 .navbar a {
-  font-family: 'Belinda script', cursive; /* Belinda for buttons */
+  font-family: 'Poppins', sans-serif; /* change buttons to Poppins */
   text-decoration: none;
   padding: 6px 12px;
   background-color: rgba(0,0,0,0.6);
@@ -72,6 +73,7 @@ body {
   font-size: 16px;
   transition: background-color 0.3s;
 }
+
 
 .navbar a:hover {
   background-color: rgba(255,255,255,0.3);
@@ -94,16 +96,17 @@ body {
 }
 
 .hero h1 {
-  font-family: 'Belinda script', cursive;
+  font-family: 'Belinda script', cursive; /* stylish font for your name */
   font-size: 48px;
   margin: 0;
 }
 
 .hero p {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Poppins', sans-serif; /* clean font for tagline */
   font-size: 20px;
   margin-top: 10px;
 }
+
 
 /* Transparent Cards */
 .card {
