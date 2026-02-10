@@ -1,70 +1,48 @@
-body {
-  margin: 0;
-  font-family: 'Belinda script', sans-serif;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rhiza Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Belinda Script font -->
+  <link href="https://fonts.cdnfonts.com/css/belinda-script" rel="stylesheet">
+</head>
+<body>
 
-  background: url('background.jpg') no-repeat center center fixed;
-  background-size: cover;
-  color: #fff; /* text color on top of image */
-}
+  <!-- Navigation -->
+  <nav class="navbar">
+    <ul>
+      <li><a href="#about">About me</a></li>
+      <li><a href="#work">Work With Me</a></li>
+      <li><a href="rhiza.tabera@gmail.com">Contacts</a></li>
+      <li><a href="#hire" class="hire-btn">Hire Me</a></li>
+    </ul>
+  </nav>
 
-header {
-  text-align: center;
-  padding: 60px 20px;
-}
+  <!-- Hero Section -->
+  <header class="hero">
+    <h1>Welcome to My Website</h1>
+    <p>Showcasing my work and passion</p>
+  </header>
 
-header span {
-  color: #6a00ff;
-}
+  <!-- About Section -->
+  <section id="about" class="card">
+    <h2>About Me</h2>
+    <p>This is where you write about yourself...</p>
+  </section>
 
-section {
-  background: transparent;
-  margin: 20px;
-  padding: 30px;
-  border-radius: 16px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-}
+  <!-- Work Section -->
+  <section id="work" class="card">
+    <h2>Work With Me</h2>
+    <p>Details about your services or collaborations...</p>
+  </section>
 
-h2 {
-  color: #ff4d6d;
-}
-font-family: 'Belinda script', cursive;
-}
+  <!-- Hire Section -->
+  <section id="hire" class="card">
+    <h2>Hire Me</h2>
+    <p>Call me at <a href="tel:+639123456789">+63 912 345 6789</a> or email <a href="mailto:yourname@gmail.com">yourname@gmail.com</a></p>
+  </section>
 
-p {
-  font-family: 'Arial', sans-serif; /* fallback for body text */
-}
-
-.skills ul {
-  list-style: none;
-  padding: 0;
-}
-
-.skills li {
-  margin: 8px 0;
-}
-
-.portfolio {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 15px;
-}
-
-.card {
-  background: #6a00ff;
-  color: transparent;
-  padding: 20px;
-  border-radius: 12px;
-  text-align: center;
-  transition: transform 0.3s;
-}
-
-.card:hover {
-  transform: scale(1.05);
-}
-
-footer {
-  text-align: center;
-  padding: 20px;
-  color: transparent;
-}
+</body>
+</html>
