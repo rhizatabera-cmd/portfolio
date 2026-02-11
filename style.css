@@ -163,3 +163,44 @@ body {
   backdrop-filter: blur(10px);
   color: white;
 }
+
+.cards-collage {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;           /* space between cards */
+  max-width: 1200px;   /* centers the grid */
+  margin: 50px auto;
+}
+
+/* Card style */
+.card {
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 25px;
+  border-radius: 12px;
+  color: white;
+  text-align: center;
+  transform: rotate(0deg);
+  transition: transform 0.3s ease;
+}
+
+/* Slight rotation for collage vibe */
+.cards-collage .card:nth-child(odd) {
+  transform: rotate(-2deg);
+}
+.cards-collage .card:nth-child(even) {
+  transform: rotate(2deg);
+}
+
+/* Optional hover effect */
+.card:hover {
+  transform: rotate(0deg) scale(1.05);
+}
+
+/* Optional vertical offsets for more staggered effect */
+.cards-collage .card:nth-child(3n) {
+  margin-top: 30px;
+}
+.cards-collage .card:nth-child(5n) {
+  margin-top: 50px;
+}
