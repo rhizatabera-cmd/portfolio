@@ -166,23 +166,20 @@ body {
 
 .cards-collage {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* ALWAYS 2 columns */
+  grid-template-columns: repeat(2, 1fr);
   gap: 30px;
-  max-width: 700px;      /* controls total width */
-  margin: 50px auto;     /* center on page */
+  max-width: 800px;
+  margin: 50px auto;
 }
 
 .card {
   background-color: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
   padding: 30px;
   border-radius: 12px;
   color: white;
   text-align: center;
-  min-height: 200px;     /* keeps cards even */
+  min-height: 220px;
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
 }
