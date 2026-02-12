@@ -85,18 +85,3 @@ body {
 .card:hover {
     transform: scale(1.05);
 }
-
-/* Mobile Responsive Styles */
-@media (max-width: 600px) {
-    nav a {
-        float: none;
-        display: block;
-        text-align: left;
-    }
-    .cards {
-        flex-direction: column;
-    }
-    .card {
-        width: 100%;
-    }
-}
