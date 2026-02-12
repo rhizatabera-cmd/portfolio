@@ -12,7 +12,7 @@ body {
 
 /* Overlay Layer */
 .overlay {
-    position: fixed; /* cover entire screen */
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -112,26 +112,21 @@ body {
 .side-menu {
   position: fixed;
   top: 0;
-  left: -300px;
+  left: -300px; /* hidden by default */
   width: 260px;
   height: 100%;
-
-  background: rgba(255, 255, 255, 0.15);
+  background: rgba(255,255,255,0.15);
   backdrop-filter: blur(15px);
-  -webkit-backdrop-filter: blur(15px);
-
-  border-right: 1px solid rgba(255, 255, 255, 0.3);
-
-  padding: 80px 30px 30px 30px; /* top right bottom left */
+  border-right: 1px solid rgba(255,255,255,0.3);
+  padding: 80px 30px 30px 30px;
   display: flex;
   flex-direction: column;
   gap: 20px;
 
-  /* Animation for slide + fade */
-  opacity: 0;               /* start invisible */
+  opacity: 0;                /* start invisible */
   transition: left 0.4s ease, opacity 0.4s ease;
 
-  z-index: 999; /*above overlay but below hamburger */
+  z-index: 999; /* above overlay but below hamburger */
 }
 
 /* When menu is active */
