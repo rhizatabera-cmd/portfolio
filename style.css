@@ -90,41 +90,46 @@ body {
     transform: scale(1.05);
 }
 
-/* Navbar */
-.navbar {
-  position: fixed;
-  top: 20px;
-  left: 20px;
-  z-index: 1000;
-}
-
 /* Hamburger */
 .hamburger {
-  font-size: 30px;
+  font-size: 28px;
   cursor: pointer;
-  background: white;
   padding: 8px 14px;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-  transition: 0.3s;
+  border-radius: 12px;
+
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: white;
+
+  transition: 0.3s ease;
 }
 
 /* Side Menu Card */
 .side-menu {
   position: fixed;
   top: 0;
-  left: -300px; /* hidden */
+  left: -300px;
   width: 260px;
   height: 100%;
-  background: white;
-  box-shadow: 4px 0 15px rgba(0,0,0,0.2);
+
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+
+  border-right: 1px solid rgba(255, 255, 255, 0.3);
+
   padding: 40px 20px;
   display: flex;
   flex-direction: column;
   gap: 20px;
+
   transition: 0.4s ease;
   z-index: 999;
 }
+
 
 /* When open */
 .side-menu.active {
@@ -135,7 +140,7 @@ body {
 .side-menu a {
   text-decoration: none;
   font-weight: 600;
-  color: #333;
+  color: white;
   font-family: 'Poppins', sans-serif;
 }
 
@@ -145,3 +150,13 @@ body {
   cursor: pointer;
   align-self: flex-end;
 }
+
+.hamburger:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.side-menu a:hover {
+  transform: translateX(5px);
+  transition: 0.3s;
+}
+
