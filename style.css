@@ -1,8 +1,7 @@
-/* style.css - Complete content including background image, overlay layer, navbar, hero section, cards-collage, card styles, and all mobile responsive styles */
 
 /* Background Image */
 body {
-    background-image: url('path/to/your/image.jpg');
+    background-image: url('6.jpg');
     background-size: cover;
     background-position: center;
 }
