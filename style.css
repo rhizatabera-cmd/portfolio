@@ -1,13 +1,9 @@
 
 /* Background Image */
 body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Poppins', sans-serif;
-    background-image: url('6.png') no-repeat center center fixed;
+    background-image: url('6.png');
     background-size: cover;
-    color: white;
-    overflow-x: hidden; /* Prevent horizontal scrolling */
+    background-position: center;
 }
 
 /* Overlay Layer */
@@ -79,7 +75,7 @@ body {
 
 /* Card Styles */
 .card {
-    background-color: transparent;
+    background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     margin: 10px;
