@@ -131,7 +131,7 @@ body {
   opacity: 0;               /* start invisible */
   transition: left 0.4s ease, opacity 0.4s ease;
 
-  z-index: 999;
+  z-index: 999; /*above overlay but below hamburger */
 }
 
 /* When menu is active */
