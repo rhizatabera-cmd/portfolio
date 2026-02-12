@@ -23,6 +23,7 @@
 
 <!-- Side Menu -->
 <div class="side-menu" id="sideMenu">
+  <div class="close-btn" id="closeBtn">✕</div>
   <a href="#about">About Me</a>
   <a href="#work">Work With Me</a>
   <a href="#hire">Hire Me</a>
@@ -80,37 +81,37 @@
 </div>
   
 <script>
-  const sideMenu = document.getElementById("sideMenu");
-  const hamburger = document.getElementById("hamburger");
-  const menuLinks = document.querySelectorAll(".side-menu a");
+const sideMenu = document.getElementById("sideMenu");
+const hamburger = document.getElementById("hamburger");
+const menuLinks = document.querySelectorAll(".side-menu a");
+const closeBtn = document.getElementById("closeBtn"); // use existing button
 
-  // Toggle menu on hamburger click
-  hamburger.addEventListener("click", () => {
-    sideMenu.classList.toggle("active"); // open/close menu
+// Toggle menu on hamburger click
+hamburger.addEventListener("click", (e) => {
+  sideMenu.classList.toggle("active");
+  hamburger.textContent = sideMenu.classList.contains("active") ? "✕" : "☰";
+  e.stopPropagation(); // Prevent this click from reaching document
+});
 
-    // Change hamburger icon to ✕ when menu is open
-    hamburger.textContent = sideMenu.classList.contains("active") ? "✕" : "☰";
+// Close menu when clicking a menu link
+menuLinks.forEach(link => {
+  link.addEventListener("click", () => {
+    sideMenu.classList.remove("active");
+    hamburger.textContent = "☰";
   });
+});
 
-  // Close menu automatically when clicking any link
-  menuLinks.forEach(link => {
-    link.addEventListener("click", () => {
-      sideMenu.classList.remove("active");
-      hamburger.textContent = "☰"; // reset hamburger to ☰
-    });
-  });
+// Close menu when clicking outside
+document.addEventListener("click", (event) => {
+  if (!sideMenu.contains(event.target) && !hamburger.contains(event.target)) {
+    sideMenu.classList.remove("active");
+    hamburger.textContent = "☰";
+  }
+});
 
-  // Hide hamburger on scroll down, show on scroll up
-  let lastScroll = 0;
-  window.addEventListener("scroll", () => {
-    let currentScroll = window.pageYOffset;
-
-    if (currentScroll > lastScroll) {
-      hamburger.style.display = "none"; // scrolling down
-    } else {
-      hamburger.style.display = "block"; // scrolling up
-    }
-
-    lastScroll = currentScroll;
-  });
-</script>
+// Close menu when clicking close button
+closeBtn.addEventListener("click", (e) => {
+  sideMenu.classList.remove("active");
+  hamburger.textContent = "☰";
+  e.stopPropagation();
+});
