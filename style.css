@@ -129,7 +129,7 @@ body {
   justify-content: center;
   align-items: center;
   gap: 30px;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   margin: 40px 0;
 }
 
@@ -148,7 +148,7 @@ body {
   justify-content: center;
   align-items: center;
   gap: 30px;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   margin: 60px auto;
   max-width: 1100px;
 }
@@ -179,7 +179,7 @@ body {
   color: white;
   text-align: center;
   min-height: 220px;
-  display: flex;
+  display: nowrap;
   align-items: center;
   justify-content: center;
 }
