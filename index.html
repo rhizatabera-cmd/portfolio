@@ -79,21 +79,29 @@
 
 </div>
     
- <script>
+<script>
   const sideMenu = document.getElementById("sideMenu");
   const hamburger = document.getElementById("hamburger");
+  const menuLinks = document.querySelectorAll(".side-menu a");
 
-  function openMenu() {
-    sideMenu.classList.add("active");
-  }
+  // Toggle menu on hamburger click
+  hamburger.addEventListener("click", () => {
+    sideMenu.classList.toggle("active"); // open/close menu
 
-  function closeMenu() {
-    sideMenu.classList.remove("active");
-  }
+    // Change hamburger icon to ✕ when menu is open
+    hamburger.textContent = sideMenu.classList.contains("active") ? "✕" : "☰";
+  });
 
-  // Hide hamburger on scroll down
+  // Close menu automatically when clicking any link
+  menuLinks.forEach(link => {
+    link.addEventListener("click", () => {
+      sideMenu.classList.remove("active");
+      hamburger.textContent = "☰"; // reset hamburger to ☰
+    });
+  });
+
+  // Hide hamburger on scroll down, show on scroll up
   let lastScroll = 0;
-
   window.addEventListener("scroll", () => {
     let currentScroll = window.pageYOffset;
 
@@ -106,3 +114,4 @@
     lastScroll = currentScroll;
   });
 </script>
+
