@@ -13,19 +13,22 @@
 </head>
 <body>
 
- 
-<!-- Hamburger Button -->
+  
+  <div class="overlay">
+    <!-- Navigation -->
 <div class="navbar">
-  <div class="hamburger" id="hamburger">☰</div>
+  <div class="hamburger" id="hamburger" onclick="openMenu()">☰</div>
 </div>
 
 <!-- Side Menu -->
 <div class="side-menu" id="sideMenu">
-  <div class="close-btn" id="closeBtn">✕</div>
+  <div class="close-btn" onclick="closeMenu()">✕</div>
   <a href="#about">About Me</a>
   <a href="#work">Work With Me</a>
   <a href="#hire">Hire Me</a>
-  <a href="#resume">Check Me Out</a>
+  <a href="#resume">Resume</a>
+</div>
+
 </div>
 
 
@@ -69,45 +72,37 @@
   </section>
 
        <section id="resume" class="card">
-    <h2>Check Me Out</h2>
+    <h2>View My Resume</h2>
     <p><a href="RhizaMaeTabera_CV.pdf" target="_blank">RhizaMaeTabera_CV.pdf</a></p>
     <p><a href="https://www.linkedin.com/in/rhiza-mae-tabera-582140149/" target="_blank">Visit My LinkedIn</a></p>
   </section>
 
 </div>
-  
-<script>
-const sideMenu = document.getElementById("sideMenu");
-const hamburger = document.getElementById("hamburger");
-const menuLinks = document.querySelectorAll(".side-menu a");
-const closeBtn = document.getElementById("closeBtn"); // use existing button
+    
+ <script>
+  const sideMenu = document.getElementById("sideMenu");
+  const hamburger = document.getElementById("hamburger");
 
-// Toggle menu on hamburger click
-hamburger.addEventListener("click", (e) => {
-  sideMenu.classList.toggle("active");
-  hamburger.textContent = sideMenu.classList.contains("active") ? "✕" : "☰";
-  e.stopPropagation(); // Prevent this click from reaching document
-});
-
-// Close menu when clicking a menu link
-menuLinks.forEach(link => {
-  link.addEventListener("click", () => {
-    sideMenu.classList.remove("active");
-    hamburger.textContent = "☰";
-  });
-});
-
-// Close menu when clicking outside
-document.addEventListener("click", (event) => {
-  if (!sideMenu.contains(event.target) && !hamburger.contains(event.target)) {
-    sideMenu.classList.remove("active");
-    hamburger.textContent = "☰";
+  function openMenu() {
+    sideMenu.classList.add("active");
   }
-});
 
-// Close menu when clicking close button
-closeBtn.addEventListener("click", (e) => {
-  sideMenu.classList.remove("active");
-  hamburger.textContent = "☰";
-  e.stopPropagation();
-});
+  function closeMenu() {
+    sideMenu.classList.remove("active");
+  }
+
+  // Hide hamburger on scroll down
+  let lastScroll = 0;
+
+  window.addEventListener("scroll", () => {
+    let currentScroll = window.pageYOffset;
+
+    if (currentScroll > lastScroll) {
+      hamburger.style.display = "none"; // scrolling down
+    } else {
+      hamburger.style.display = "block"; // scrolling up
+    }
+
+    lastScroll = currentScroll;
+  });
+</script>
