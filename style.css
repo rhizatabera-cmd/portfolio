@@ -151,28 +151,3 @@ body {
   transform: translateX(5px);
   transition: 0.3s;
 }
-
-/* Tools Section */
-#tools-section {
-  text-align: center;
-  padding: 50px 20px;
-  background: rgba(0, 0, 0, 0.2); /* subtle separation */
-  border-radius: 10px;
-  margin: 30px 10px; /* spacing between cards and tools */
-}
-
-#tools-section h2 {
-  font-size: 28px;
-  color: white;
-  margin-bottom: 30px;
-}
-
-.tools-icons {
-  display: flex;
-  justify-content: center;
-}
-
-#tool-icon {
-  width: 120px;  /* adjust size as needed */
-  height: 120px;
-}
