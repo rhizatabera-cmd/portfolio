@@ -143,13 +143,6 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 
-/* Close Button */
-.close-btn {
-  font-size: 22px;
-  cursor: pointer;
-  align-self: flex-end;
-}
-
 .hamburger:hover {
   background: rgba(255, 255, 255, 0.25);
 }
