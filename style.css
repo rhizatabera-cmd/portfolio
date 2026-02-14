@@ -152,3 +152,24 @@ body {
   transition: 0.3s;
 }
 
+#footer {
+  text-align: center;
+  padding: 20px 10px;
+  background: rgba(0, 0, 0, 0.6); /* semi-transparent black */
+  color: #ddd; /* light gray text for readability */
+  font-size: 14px;
+  margin-top: 50px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1); /* subtle top border */
+  backdrop-filter: blur(5px); /* slight blur behind footer */
+}
+
+#footer a {
+  color: #fff; /* white links */
+  text-decoration: underline;
+}
+
+#footer a:hover {
+  color: #ff4d4d; /* subtle red on hover */
+}
+
+
