@@ -104,6 +104,9 @@ body {
   color: white;
 
   transition: 0.3s ease;
+
+  position: relative;   /* ADD THIS */
+  z-index: 2000;        /* ADD THIS */
 }
 
 /* Side Menu Card */
