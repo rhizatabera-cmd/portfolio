@@ -63,17 +63,13 @@
     </p>
   </section>
       
-      <section id="tools" class="card">
-    <h2>Tools</h2>
-    <p>
-      Outlook<br>
-      Calendly<br>
-      Trello<br>
-      Asana<br>
-      Notion<br>
-      Grammarly
-    </p>
-  </section>
+     <!-- New Tools Section with Lottie Icon -->
+<section id="tools-section">
+  <h2>Tools I Use</h2>
+  <div class="tools-icons">
+    <div id="tool-icon"></div>
+  </div>
+</section>
 
   <section id="hire" class="card">
     <h2>Hire Me</h2>
@@ -123,4 +119,13 @@
     hamburger.style.display = currentScroll > lastScroll ? "none" : "block";
     lastScroll = currentScroll;
   });
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.9.6/lottie.min.js"></script>
+<script>
+lottie.loadAnimation({
+  container: document.getElementById('tool-icon'),
+  renderer: 'svg',
+  loop: true,
+  autoplay: true,
+  path: 'icon.json' // <-- your Lottie file in the same folder
+});
 </script>
