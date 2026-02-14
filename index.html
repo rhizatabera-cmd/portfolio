@@ -14,15 +14,11 @@
 <body>
 
   
-  <!-- Navigation OUTSIDE overlay -->
+  <div class="overlay">
+    <!-- Navigation -->
 <div class="navbar">
-  <div class="hamburger" id="hamburger">☰</div>
+  <div class="hamburger" id="hamburger" onclick="openMenu()">☰</div>
 </div>
-
-<div class="overlay">
-  <!-- rest of your content -->
-</div>
-  
 
 <!-- Side Menu -->
 <div class="side-menu" id="sideMenu">
@@ -82,29 +78,21 @@
 
 </div>
     
-<script>
+ <script>
   const sideMenu = document.getElementById("sideMenu");
   const hamburger = document.getElementById("hamburger");
-  const menuLinks = document.querySelectorAll(".side-menu a");
 
-  // Toggle menu on hamburger click
-  hamburger.addEventListener("click", () => {
-    sideMenu.classList.toggle("active"); // open/close menu
+  function openMenu() {
+    sideMenu.classList.add("active");
+  }
 
-    // Change hamburger icon to ✕ when menu is open
-    hamburger.textContent = sideMenu.classList.contains("active") ? "✕" : "☰";
-  });
+  function closeMenu() {
+    sideMenu.classList.remove("active");
+  }
 
-  // Close menu automatically when clicking any link
-  menuLinks.forEach(link => {
-    link.addEventListener("click", () => {
-      sideMenu.classList.remove("active");
-      hamburger.textContent = "☰"; // reset hamburger to ☰
-    });
-  });
-
-  // Hide hamburger on scroll down, show on scroll up
+  // Hide hamburger on scroll down
   let lastScroll = 0;
+
   window.addEventListener("scroll", () => {
     let currentScroll = window.pageYOffset;
 
@@ -116,29 +104,4 @@
 
     lastScroll = currentScroll;
   });
-<script>
-  const sideMenu = document.getElementById("sideMenu");
-  const hamburger = document.getElementById("hamburger");
-  const menuLinks = document.querySelectorAll(".side-menu a");
-
-  hamburger.addEventListener("click", () => {
-    sideMenu.classList.toggle("active");
-    hamburger.textContent = sideMenu.classList.contains("active") ? "✕" : "☰";
-  });
-
-  menuLinks.forEach(link => {
-    link.addEventListener("click", () => {
-      sideMenu.classList.remove("active");
-      hamburger.textContent = "☰";
-    });
-  });
-
-  // ✅ Close menu when clicking outside
-  document.addEventListener("click", function(event) {
-    const isInsideMenu = sideMenu.contains(event.target);
-    const isHamburger = hamburger.contains(event.target);
-
-    if (!isInsideMenu && !isHamburger) {
-      sideMenu.classList.remove("active");
-      hamburger.textContent = "☰";
-    }
+</script>
