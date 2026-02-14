@@ -78,30 +78,36 @@
 
 </div>
     
- <script>
+<script>
   const sideMenu = document.getElementById("sideMenu");
   const hamburger = document.getElementById("hamburger");
 
-  function openMenu() {
-    sideMenu.classList.add("active");
-  }
+  // Toggle side menu when clicking hamburger
+  hamburger.addEventListener("click", (e) => {
+    e.stopPropagation(); // Prevent document click from firing
+    sideMenu.classList.toggle("active");
+  });
 
-  function closeMenu() {
-    sideMenu.classList.remove("active");
-  }
+  // Close side menu if clicking outside
+  document.addEventListener("click", (e) => {
+    if (!sideMenu.contains(e.target) && !hamburger.contains(e.target)) {
+      sideMenu.classList.remove("active");
+    }
+  });
+
+  // Close menu when a link inside is clicked
+  const sideLinks = sideMenu.querySelectorAll("a");
+  sideLinks.forEach(link => {
+    link.addEventListener("click", () => {
+      sideMenu.classList.remove("active");
+    });
+  });
 
   // Hide hamburger on scroll down
   let lastScroll = 0;
-
   window.addEventListener("scroll", () => {
     let currentScroll = window.pageYOffset;
-
-    if (currentScroll > lastScroll) {
-      hamburger.style.display = "none"; // scrolling down
-    } else {
-      hamburger.style.display = "block"; // scrolling up
-    }
-
+    hamburger.style.display = currentScroll > lastScroll ? "none" : "block";
     lastScroll = currentScroll;
   });
 </script>
